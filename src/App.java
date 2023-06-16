@@ -15,11 +15,11 @@ public class App {
       statement.setQueryTimeout(30);  // Espera só por 30 segundos para conectar
 
       // Roda os comandos para o SQLite
-      statement.executeUpdate("DROP TABLE IF EXISTS terminalroot");
-      statement.executeUpdate("CREATE TABLE terminalroot (id INTEGER, name STRING)");
-      statement.executeUpdate("INSERT INTO terminalroot VALUES(1, 'Elson Costa')");
-      statement.executeUpdate("INSERT INTO terminalroot VALUES(2, 'Alexandro')");
-      ResultSet rs = statement.executeQuery("SELECT * FROM terminalroot");
+      statement.executeUpdate("DROP TABLE IF EXISTS Pessoas");
+      statement.executeUpdate("CREATE TABLE Pessoas (id INTEGER, name STRING)");
+      statement.executeUpdate("INSERT INTO Pessoas VALUES(1, 'Elson Costa')");
+      statement.executeUpdate("INSERT INTO Pessoas VALUES(2, 'Alexandro')");
+      ResultSet rs = statement.executeQuery("SELECT * FROM Pessoas");
       while(rs.next()) {
         // Ler os dados inseridos
         System.out.println("NOME DO CARA  : " + rs.getString("name"));
